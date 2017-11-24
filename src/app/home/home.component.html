@@ -1,9 +1,18 @@
 <div class="home-page">
 
+  <div class="banner" *showAuthed="true">
+    <div class="container">
+      <h1 class="logo-font">Winston's Blog</h1>
+      <p>Welcome to
+        <i>Winston's</i> blog! <i class="ion-social-octocat"></i></p>
+    </div>
+  </div>
+
   <div class="banner" *showAuthed="false">
     <div class="container">
-      <h1 class="logo-font">conduit</h1>
-      <p>A place to share your <i>Angular 2</i> knowledge.</p>
+      <h1 class="logo-font">Winston's Blog</h1>
+      <p>Welcome to
+        <i>Winston's</i> blog! <i class="ion-social-octocat"></i></p>
     </div>
   </div>
 
@@ -14,17 +23,13 @@
         <div class="feed-toggle">
           <ul class="nav nav-pills outline-active">
             <li class="nav-item">
-              <a class="nav-link"
-                 [ngClass]="{'active': listConfig.type === 'feed'}"
-                 (click)="setListTo('feed')">
-                 Your Feed
+              <a class="nav-link" [ngClass]="{'active': listConfig.type === 'feed'}" (click)="setListTo('feed')">
+                Your Feed
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link"
-                 [ngClass]="{'active': listConfig.type === 'all' && !listConfig.filters.tag}"
-                 (click)="setListTo('all')">
-                 Global Feed
+              <a class="nav-link" [ngClass]="{'active': listConfig.type === 'all' && !listConfig.filters.tag}" (click)="setListTo('all')">
+                Global Feed
               </a>
             </li>
             <li class="nav-item" [hidden]="!listConfig.filters.tag">
@@ -40,14 +45,11 @@
 
       <div class="col-md-3">
         <div class="sidebar">
-          <p>Popular Tags</p>
+          <p><b>Popular Tags</b></p>
 
           <div class="tag-list">
-            <a href="#"
-               *ngFor="let tag of tags"
-               (click)="setListTo('all', {tag: tag})"
-               class="tag-default tag-pill">
-               {{ tag }}
+            <a href="#" *ngFor="let tag of tags" (click)="setListTo('all', {tag: tag})" class="tag-default tag-pill">
+              {{ tag }}
             </a>
           </div>
 

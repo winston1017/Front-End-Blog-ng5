@@ -24,8 +24,7 @@ export class SettingsComponent implements OnInit {
       image: '',
       username: '',
       bio: '',
-      email: '',
-      password: ''
+      email: ''
     });
     // Optional: subscribe to changes on the form
     // this.settingsForm.valueChanges.subscribe(values => this.updateUser(values));

@@ -84,5 +84,4 @@ export class UserService {
       return data.user;
     });
   }
-
 }

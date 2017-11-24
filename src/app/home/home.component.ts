@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
 
         // set the article list accordingly
         if (authenticated) {
-          this.setListTo('feed');
+          this.setListTo('all');
         } else {
           this.setListTo('all');
         }

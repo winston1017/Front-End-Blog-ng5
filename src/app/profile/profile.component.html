@@ -30,7 +30,7 @@
       <div class="col-xs-12 col-md-10 offset-md-1">
         <div class="articles-toggle">
           <ul class="nav nav-pills outline-active">
-            <li class="nav-item">
+            <li *ngIf="currentUser.username === 'winston'" class="nav-item">
               <a class="nav-link"
                  routerLinkActive="active"
                  [routerLinkActiveOptions]="{ exact: true }"
