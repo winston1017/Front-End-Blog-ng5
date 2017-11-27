@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 
 import { ArticleListConfig, TagsService, UserService } from '../shared';
 
+import * as Typed from 'typed.js';
+
 @Component({
   selector: 'home-page',
   templateUrl: './home.component.html',
@@ -13,7 +15,7 @@ export class HomeComponent implements OnInit {
     private router: Router,
     private tagsService: TagsService,
     private userService: UserService
-  ) {}
+  ) { }
 
   isAuthenticated: boolean;
   listConfig: ArticleListConfig = new ArticleListConfig();
@@ -21,6 +23,15 @@ export class HomeComponent implements OnInit {
   tagsLoaded = false;
 
   ngOnInit() {
+
+    var options = {
+      strings: ["Hi I'm Winston.^800 I am a Computer Science graduate from Simon Fraser University in Vancouver, BC.",
+       "Hi I'm Winston. I have experience in Angular 5, Node.js, Express.js, C++, C# and Unity Engine."],
+      typeSpeed: 36
+    }
+
+    var typed = new Typed("#typed-strings", options);
+
     this.userService.isAuthenticated.subscribe(
       (authenticated) => {
         this.isAuthenticated = authenticated;
@@ -35,10 +46,10 @@ export class HomeComponent implements OnInit {
     );
 
     this.tagsService.getAll()
-    .subscribe(tags => {
-      this.tags = tags;
-      this.tagsLoaded = true;
-    });
+      .subscribe(tags => {
+        this.tags = tags;
+        this.tagsLoaded = true;
+      });
   }
 
   setListTo(type: string = '', filters: Object = {}) {
@@ -47,8 +58,12 @@ export class HomeComponent implements OnInit {
       this.router.navigateByUrl('/login');
       return;
     }
+    if (type === 'links') {
+      this.router.navigateByUrl('/profile/winston');
+      return;
+    }
 
     // Otherwise, set the list object
-    this.listConfig = {type: type, filters: filters};
+    this.listConfig = { type: type, filters: filters };
   }
 }

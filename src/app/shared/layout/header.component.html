@@ -1,13 +1,14 @@
-<nav class="navbar navbar-light">
+<nav class="navbar navbar-dark">
   <div class="container">
+
     <a class="navbar-brand" routerLink="/">Winston Lee</a>
 
     <!-- Show this for logged out users -->
     <ul *showAuthed="false" class="nav navbar-nav pull-xs-right">
 
       <li class="nav-item">
-        <a class="nav-link" routerLink="/">
-          Home
+        <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+          <i class="ion-home"></i>&nbsp;Home
         </a>
       </li>
 

@@ -1,21 +1,42 @@
 <div class="home-page">
+  <div class="showcase">
+    <div class="banner">
+      <div class="container">
+        <div class="row">
 
-  <div class="banner" *showAuthed="true">
-    <div class="container">
-      <h1 class="logo-font">Winston's Blog</h1>
-      <p>Welcome to
-        <i>Winston's</i> blog! <i class="ion-social-octocat"></i></p>
+          <div class="leftSide col-lg-3 col-md-3 hidden-xs hidden-sm">
+            <h1 class="logo-font">Winston Lee</h1>
+          </div>
+
+          <div class="rightSide col-lg-9 col-md-9  col-sm-12 col-xs-12">
+
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1 col-xs-12 col-sm-12">
+                <h1>
+                  <span class="type-font" id="typed-strings" ></span>
+                </h1>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1 hidden-xs hidden-sm">
+                <h2 class="logo-font"><"app slideshow placeholder"></h2>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-4 col-md-offset-4 col-xs-4 col-xs-offset-4 col-sm-4 col-sm-offset-4">
+                <a href="https://www.linkedin.com/in/winston-software-developer/">
+                  <h3><img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/square-linkedin-256.png" class="img-contact"/></h3>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-
-  <div class="banner" *showAuthed="false">
-    <div class="container">
-      <h1 class="logo-font">Winston's Blog</h1>
-      <p>Welcome to
-        <i>Winston's</i> blog! <i class="ion-social-octocat"></i></p>
-    </div>
-  </div>
-
   <div class="container page">
     <div class="row">
 
@@ -32,6 +53,11 @@
                 Global Feed
               </a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" [ngClass]="{'active': listConfig.type === 'links'}" (click)="setListTo('links')">
+                Helpful Links
+              </a>
+            </li>
             <li class="nav-item" [hidden]="!listConfig.filters.tag">
               <a class="nav-link active">
                 <i class="ion-pound"></i> {{ listConfig.filters.tag }}
@@ -45,7 +71,9 @@
 
       <div class="col-md-3">
         <div class="sidebar">
-          <p><b>Popular Tags</b></p>
+          <p>
+            <b>Popular Tags</b>
+          </p>
 
           <div class="tag-list">
             <a href="#" *ngFor="let tag of tags" (click)="setListTo('all', {tag: tag})" class="tag-default tag-pill">

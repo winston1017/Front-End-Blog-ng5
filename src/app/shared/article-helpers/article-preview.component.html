@@ -3,7 +3,9 @@
   <a [routerLink]="['/article', article.slug]" class="preview-link">
     <h1>{{ article.title }}</h1>
   </a>
+  
   <div class="preview-link">
+
     <favorite-button [article]="article" (onToggle)="onToggleFavorite($event)" class="pull-xs-right">
       {{article.favoritesCount}}
     </favorite-button>
@@ -24,4 +26,5 @@
 
   <article-meta [article]="article">
   </article-meta>
+
 </div>

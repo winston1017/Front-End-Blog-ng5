@@ -52,11 +52,7 @@ export class FavoriteButtonComponent {
             err => this.isSubmitting = false
           );
         }
-
       }
     )
-
-
   }
-
 }
