@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
 
     var options = {
       strings: ["Hi I'm Winston.^800 I am a Computer Science graduate from Simon Fraser University in Vancouver, BC.",
-       "Hi I'm Winston. I have experience in Angular 5, Node.js, Express.js, C++, C# and Unity Engine."],
+       "Hi I'm Winston. I have experience in Angular 5, Node.js, Express.js, HTML, CSS, C++, C# and Unity Engine."],
       typeSpeed: 36
     }
 

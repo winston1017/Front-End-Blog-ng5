@@ -8,30 +8,41 @@
             <h1 class="logo-font">Winston Lee</h1>
           </div>
 
-          <div class="rightSide col-lg-9 col-md-9  col-sm-12 col-xs-12">
+          <div class="rightSide col-lg-9 col-md-9 col-sm-12 col-xs-12">
 
             <div class="row">
               <div class="col-md-10 col-md-offset-1 col-xs-12 col-sm-12">
                 <h1>
-                  <span class="type-font" id="typed-strings" ></span>
+                  <span class="type-font" id="typed-strings"></span>
                 </h1>
               </div>
             </div>
 
             <div class="row">
               <div class="col-md-10 col-md-offset-1 hidden-xs hidden-sm">
-                <h2 class="logo-font"><"app slideshow placeholder"></h2>
+                <h2>
+                  <a href="https://play.google.com/store/apps/details?id=com.WontonLabs.KnockThemOff2&hl=en">
+                    <img class="app-preview" src="https://lh3.googleusercontent.com/WsH5DdsmVdS1Owyht01CdKnEgKkZ65OGCnesjk_gIdRehmdeXkGXIXCUfSXwFiRfGQ=h310-rw">
+                  </a>
+                </h2>
+              </div>
+
+              <div class="row">
+                <div class="col-md-10 col-md-offset-1 col-xs-12 col-sm-12">
+                  <h3>
+                    <a href="https://www.linkedin.com/in/winston-software-developer/">
+                      <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/square-linkedin-256.png" class="img-contact" />
+                    </a>
+                    <a href="https://github.com/winston1017/">
+                      <img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" class="img-contact" />
+                    </a>
+                    <a href="mailto:winston1017@gmail.com">
+                      <img src="http://icons.iconarchive.com/icons/alecive/flatwoken/512/Apps-Gmail-icon.png" class="img-contact" />
+                    </a>
+                  </h3>
+                </div>
               </div>
             </div>
-
-            <div class="row">
-              <div class="col-md-4 col-md-offset-4 col-xs-4 col-xs-offset-4 col-sm-4 col-sm-offset-4">
-                <a href="https://www.linkedin.com/in/winston-software-developer/">
-                  <h3><img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/square-linkedin-256.png" class="img-contact"/></h3>
-                </a>
-              </div>
-            </div>
-
           </div>
         </div>
       </div>
@@ -42,28 +53,31 @@
 
       <div class="col-md-9">
         <div class="feed-toggle">
-          <ul class="nav nav-pills outline-active">
-            <li class="nav-item">
-              <a class="nav-link" [ngClass]="{'active': listConfig.type === 'feed'}" (click)="setListTo('feed')">
-                Your Feed
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" [ngClass]="{'active': listConfig.type === 'all' && !listConfig.filters.tag}" (click)="setListTo('all')">
-                Global Feed
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" [ngClass]="{'active': listConfig.type === 'links'}" (click)="setListTo('links')">
-                Helpful Links
-              </a>
-            </li>
-            <li class="nav-item" [hidden]="!listConfig.filters.tag">
-              <a class="nav-link active">
-                <i class="ion-pound"></i> {{ listConfig.filters.tag }}
-              </a>
-            </li>
-          </ul>
+          <div class="row">
+            <ul class="nav nav-pills outline-active">
+              <div class="col-3">
+                <li class="nav-item">
+                  <a class="nav-link" [ngClass]="{'active': listConfig.type === 'all' && !listConfig.filters.tag}" (click)="setListTo('all')">
+                    Global Feed
+                  </a>
+                </li>
+              </div>
+              <div class="col-3">
+                <li class="nav-item">
+                  <a class="nav-link" [ngClass]="{'active': listConfig.type === 'links'}" (click)="setListTo('links')">
+                    Helpful Links
+                  </a>
+                </li>
+              </div>
+              <div class="col-3">
+                <li class="nav-item" [hidden]="!listConfig.filters.tag">
+                  <a class="nav-link active">
+                    <i class="ion-pound"></i> {{ listConfig.filters.tag }}
+                  </a>
+                </li>
+              </div>
+            </ul>
+          </div>
         </div>
 
         <article-list [limit]="10" [config]="listConfig"></article-list>
@@ -93,4 +107,3 @@
 
     </div>
   </div>
-</div>
