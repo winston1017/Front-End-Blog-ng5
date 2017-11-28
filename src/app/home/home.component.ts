@@ -25,9 +25,9 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
 
     var options = {
-      strings: ["Hi I'm Winston.^800 I am a Computer Science graduate from Simon Fraser University in Vancouver, BC.",
-       "Hi I'm Winston. I have experience in Angular 5, Node.js, Express.js, HTML, CSS, C++, C# and Unity Engine."],
-      typeSpeed: 36
+      strings: ["Hi I'm Winston.^888 <br> I am a Computer Science graduate from Simon Fraser University in Vancouver, BC.",
+       "Hi I'm Winston. <br> I have experience in Angular 5, Node.js, Express.js, HTML, CSS, C++, C# and Unity Engine."],
+      typeSpeed: 36,
     }
 
     var typed = new Typed("#typed-strings", options);
