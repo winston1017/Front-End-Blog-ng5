@@ -3,28 +3,30 @@
   <a [routerLink]="['/article', article.slug]" class="preview-link">
     <h1>{{ article.title }}</h1>
   </a>
-  
-  <div class="preview-link">
+  <div class="row">
 
-    <favorite-button [article]="article" (onToggle)="onToggleFavorite($event)" class="pull-xs-right">
-      {{article.favoritesCount}}
-    </favorite-button>
+    <div class="preview-link col-6">
 
-    <p>{{ article.description }}</p>
+      <favorite-button [article]="article" (onToggle)="onToggleFavorite($event)" class="pull-xs-right">
+        {{article.favoritesCount}}
+      </favorite-button>
 
-    <ul class="tag-list">
-      <li class="tag-default tag-pill" *ngFor="let tag of article.tagList">
-        {{ tag }}
-      </li>
-    </ul>
+      <p>{{ article.description }}</p>
 
-    <a [routerLink]="['/article', article.slug]">
-      <span>Read more...</span>
-    </a>
+      <ul class="tag-list hidden-xs">
+        <li class="tag-default tag-pill" *ngFor="let tag of article.tagList">
+          {{ tag }}
+        </li>
+      </ul>
 
+      <a [routerLink]="['/article', article.slug]">
+        <span>Read more...</span>
+      </a>
+    </div>
+
+    <div class="col-6">
+      <article-meta [article]="article">
+      </article-meta>
+    </div>
   </div>
-
-  <article-meta [article]="article">
-  </article-meta>
-
 </div>

@@ -2,15 +2,16 @@
 
   <div class="banner">
     <div class="container">
-      <h1>{{ article.title }}</h1>
+      <h1 style="text-align:center; padding:0.5em;">{{ article.title }}</h1>
 
-      <article-meta [article]="article">
+      <div class="row" style="text-align:center">
+        <article-meta [article]="article">
+        </article-meta><br>
 
         <span [hidden]="!canModify">
           <a class="btn btn-sm btn-outline-secondary" [routerLink]="['/editor', article.slug]">
             <i class="ion-edit"></i> Edit Article
           </a>
-
           <button class="btn btn-sm btn-outline-danger" [ngClass]="{disabled: isDeleting}" (click)="deleteArticle()">
             <i class="ion-trash-a"></i> Delete Article
           </button>
@@ -26,7 +27,7 @@
           </favorite-button>
         </span>
 
-      </article-meta>
+      </div>
     </div>
   </div>
 
@@ -34,11 +35,10 @@
 
     <div class="row article-content">
       <div class="col-md-12" style="
-      margin-top: 1em;
       background:#fafafa;
       border-radius: 0.5rem; ">
 
-        <div [innerHTML]="article.body | markdown"></div>
+        <div [innerHTML]="article.body | markdown" style="padding:0.15em"></div>
 
         <ul class="tag-list">
           <li *ngFor="let tag of article.tagList" class="tag-default tag-pill tag-outline">

@@ -25,12 +25,19 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
 
     var options = {
-      strings: ["Hi I'm Winston.^888 <br> I am a Computer Science graduate from Simon Fraser University in Vancouver, BC.",
-       "Hi I'm Winston. <br> I have experience in Angular 5, Node.js, Express.js, HTML, CSS, C++, C# and Unity Engine."],
-      typeSpeed: 36,
-    }
+      strings: ['Here is my <a href="assets/ResumeC.pdf">[&nbsp;<strong>RESUMÉ</strong>&nbsp;]</a>.'],
+      typeSpeed: 30,
+      startDelay: 11200,
+      showCursor: false,
+    };
 
     var typed = new Typed("#typed-strings", options);
+
+    var typed22 = new Typed('#typed-strings22', {
+      stringsElement: '#typed22',
+      typeSpeed: 30,
+      backSpeed: 12
+    });
 
     this.userService.isAuthenticated.subscribe(
       (authenticated) => {

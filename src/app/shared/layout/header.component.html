@@ -18,7 +18,7 @@
         </a>
       </li>
 
-      <li class="nav-item">
+      <li class="nav-item hidden-xs">
         <a class="nav-link" routerLink="/register" routerLinkActive="active">
           Sign up
         </a>
@@ -34,7 +34,7 @@
           <i class="ion-home"></i>&nbsp;Home
         </a>
       </li>
-      <li *ngIf="currentUser.username === 'winston'" class="nav-item">
+      <li *ngIf="currentUser.username === 'winston'" class="nav-item hidden-xs">
         <a class="nav-link" routerLink="/editor" routerLinkActive="active">
           <i class="ion-compose"></i>&nbsp;New Article
         </a>
@@ -44,7 +44,7 @@
           <img [src]="currentUser.image" *ngIf="currentUser.image" class="user-pic" /> {{ currentUser.username }}
         </a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item hidden-xs">
           <a class="nav-link" routerLink="/settings" routerLinkActive="active">
             <i class="ion-gear-a"></i>&nbsp;Settings
           </a>
