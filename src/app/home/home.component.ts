@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
     var options = {
       strings: ['Here is my <a href="assets/ResumeC.pdf">[&nbsp;<strong>RESUMÉ</strong>&nbsp;]</a>.'],
       typeSpeed: 30,
-      startDelay: 11200,
+      startDelay: 11600,
       showCursor: false,
     };
 
@@ -36,7 +36,7 @@ export class HomeComponent implements OnInit {
     var typed22 = new Typed('#typed-strings22', {
       stringsElement: '#typed22',
       typeSpeed: 30,
-      backSpeed: 12
+      backSpeed: 10
     });
 
     this.userService.isAuthenticated.subscribe(

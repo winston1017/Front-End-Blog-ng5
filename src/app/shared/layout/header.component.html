@@ -9,26 +9,22 @@
         <a class="icon-menu">
         </a>
         <ul>
-          <!-- Site Navigation-->
-          <li class="hidden-sm hidden-md hidden-lg">
-            <a routerLink="/">Home</a>
-          </li>
           <li>
-            <a routerLink="/profile/winston">About</a>
+            <a class="nav-link" routerLinkActive="active" routerLink="/profile/winston">About</a>
           </li>
           <li>
             <a href="#">Projects (WIP)</a>
           </li>
           <li>
-            <a routerLink="/login">Login</a>
+            <a class="nav-link" routerLinkActive="active" routerLink="/login">Login</a>
           </li>
           <li>
-            <a routerLink="/register">Sign Up</a>
+            <a class="nav-link" routerLinkActive="active" routerLink="/register">Sign Up</a>
           </li>
         </ul>
       </li>
       <!-- Horizontal Menu -->
-      <li class="hidden-xs">
+      <li>
         <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
       </li>
       <!-- Right handed menu -->
@@ -36,7 +32,7 @@
         <a class="nav-link icon-user" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="/login">Account</a>
         <ul>
           <li>
-            <a class="nav-link"routerLinkActive="active" routerLink="/login">Login</a>
+            <a class="nav-link" routerLinkActive="active" routerLink="/login">Login</a>
           </li>
           <li>
             <a class="nav-link" routerLinkActive="active" routerLink="/register">Sign Up</a>
@@ -59,37 +55,37 @@
         <ul>
           <!-- Site Navigation-->
           <li>
-            <a class="icon-projects" href="#">Projects (WIP)</a>
-          </li>
+              <a class="nav-link" routerLinkActive="active" routerLink="/profile/winston">About</a>
+            </li>
           <li>
-            <a class="icon-settings" routerLink="/settings">Settings</a>
+            <a class="icon-projects" href="#">Projects (WIP)</a>
           </li>
         </ul>
       </li>
       <!-- Horizontal Menu -->
       <li>
-        <a class="icon-portal" routerLink="/">Home</a>
+        <a  class="nav-link" routerLinkActive="active" routerLink="/">Home</a>
       </li>
       <!-- Right handed menu -->
       <li class="right">
         <a class="icon-user">{{ currentUser.username }}</a>
         <ul>
           <li>
-            <a class="icon-settings" [routerLink]="['/profile', currentUser.username]">Profile</a>
+            <a class="nav-link" routerLinkActive="active" [routerLink]="['/profile', currentUser.username]">Profile</a>
           </li>
           <li>
-            <a class="icon-settings" routerLink="/settings">Settings</a>
+            <a class="nav-link" routerLinkActive="active" routerLink="/settings">Settings</a>
           </li>
           <li>
-            <a class="icon-settings" href="" (click)="logout()">Logout</a>
+            <a class="nav-link" href="" (click)="logout()">Logout</a>
           </li>
           <li *ngIf="currentUser.username === 'winston'">
-            <a class="icon-settings" routerLink="/editor">New Article</a>
+            <a class="nav-link" routerLinkActive="active" routerLink="/editor">New Article</a>
           </li>
         </ul>
       </li>
-      <li class="right hidden-xs">
-        <a class="icon-print" routerLink="/profile/winston">About</a>
+      <li class="right">
+        <a class="nav-link" routerLinkActive="active" routerLink="/profile/winston">About</a>
       </li>
     </ul>
   </div>

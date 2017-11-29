@@ -4738,7 +4738,7 @@ footer .attribution {
 .article-page .banner {
   background: #4e414a;
   background-image: linear-gradient(to right, #000, rgba(0, 0, 0, 0.0)), url(assets/img/hexpattern.png);
-  padding: 2rem 0 2rem 0;
+  padding: 5rem 0 2rem 0;
 }
 .article-page .banner h1 {
   font-size: 2.8rem;
@@ -4752,7 +4752,7 @@ footer .attribution {
   opacity: 1;
 }
 .article-page .banner .article-meta {
-  margin: 2rem 0 0 0;
+  margin: 5rem 0 0 0;
 }
 .article-page .banner .article-meta .author {
   color: #fff;
@@ -4761,7 +4761,7 @@ footer .attribution {
   font-family: 'Source Serif Pro', serif;
   font-size: 1.2rem;
   line-height: 1.8rem;
-  margin: 2rem;
+  margin: 1.3rem;
 }
 .article-page .article-content h1,
 .article-page .article-content h2,
@@ -5131,7 +5131,7 @@ footer .attribution {
 }
 @media (max-width: 575px) {
   body {
-      margin-top: 70px;
+      margin-top: 65px;
   }
   .navbar-default {
       position: fixed;
@@ -5145,7 +5145,7 @@ footer .attribution {
 }
 @media (max-width: 767px) {
   body {
-      margin-top: 35px;
+      margin-top: 30px;
   }
   .navbar-default {
       position: fixed;
@@ -5159,7 +5159,7 @@ footer .attribution {
 }
 @media (min-width: 767px) {
   body {
-      margin-top: 35px;
+      margin-top: 30px;
   }
   .navbar-default {
       position: fixed;
