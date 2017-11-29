@@ -25,7 +25,7 @@ html {
 body {
   width: 100%;
   margin: 0;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Quattrocento Sans", sans-serif;
   font-size: 1rem;
   color: #373a3c;
   background: #ebe9ea;
@@ -4438,14 +4438,15 @@ ul.tag-list li {
   border-bottom: 2px solid transparent;
   background: transparent;
   color: rgb(100, 100, 100);
+  font-weight: bold;
 }
 .nav-pills.outline-active .nav-link:hover {
-  color: rgb(0, 0, 0);
-  border-radius: 0px;
-  background: #969495;
+  color: #fff;
+  border-radius: 1px;
+  background: #cc9900;
 }
 .nav-pills.outline-active .nav-link.active {
-  background: #fff !important;
+  background: #f6f6f6 !important;
   border-bottom: 2px solid #4e414a !important;
   color: #cc9900 !important;
   font-weight: bold;
@@ -4612,7 +4613,6 @@ footer .attribution {
 .home-page .showcase .banner .leftSide .ani {
   background: url(assets/img/winstontrix.png);
   opacity: 0.25;
-  color: #ecf2f9;
   text-align: center;
   -webkit-animation: bgscroll 20s infinite linear;
   animation: bgscroll 20s infinite linear;
@@ -4672,15 +4672,12 @@ footer .attribution {
 .home-page .showcase .banner .rightSide .row .img-contact {
   height: 7vh;
   border-radius: 25px;
-  margin: 0vh 2vw;
+  margin: 0vh 4vw;
   box-shadow: 5px 5px 5px rgb(0, 0, 0);
   -webkit-filter: opacity(80%); /* Safari */
   filter: opacity(80%);
 }
 .home-page .showcase .banner .rightSide .row .img-contact:hover {
-  height: 7vh;
-  border-radius: 25px;
-  box-shadow: 5px 5px 5px rgb(0, 0, 0);
   -webkit-filter: opacity(100%); /* Safari */
   filter: opacity(100%);
 }
@@ -5178,4 +5175,227 @@ footer .attribution {
     font-size: 2.5rem;}
     .home-page .showcase .banner .rightSide .row h2 {
       font-size: 2.5rem;}
+}
+
+/*Implement dropdown menu*/
+
+.right {
+  float: right !important;
+}
+
+.shadow {
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(51, 51, 51, 0.25);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(51, 51, 51, 0.25);
+  box-shadow: 0px 0px 15px 0px rgba(51, 51, 51, 0.25);
+}
+
+/* Reset some CSS (May be optional) */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+input, label, textarea, select {
+  font-size: inherit;
+  font-family: inherit;
+}
+
+input {
+  background-color: transparent;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Icomoon Package */
+[class^="icon-"]::before,
+[class*=" icon-"]::before {
+  font-family: 'icomoon';
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"] span,
+[class*=" icon-"] span {
+  width: 0;
+  height: 0;
+  display: block;
+  overflow: hidden;
+}
+
+/* Navigation Style */
+#nexus {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  color: #fff;
+  background-color: rgb(0, 0, 0);
+  min-width: 320px;
+  border-bottom: 1px solid #cc9900;
+  position: fixed;
+  padding: 0;
+  margin: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+#nexus * {
+  transition: all 0.33s;
+  line-height: 2.5em;
+  background-color: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+  list-style: none;
+  cursor: pointer;
+  display: block;
+  color: inherit;
+  padding: 0;
+  margin: 0;
+}
+#nexus ::webkit-scrollbar {
+  display: none;
+}
+#nexus > li {
+  position: relative;
+  float: left;
+}
+#nexus > li > a {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+#nexus > li > a:empty {
+  padding-right: 0;
+}
+#nexus li ul {
+  overflow: hidden;
+  position: absolute;
+  min-width: 100%;
+  left: 0;
+  border-bottom: 1px solid #cc9900;
+}
+#nexus li.right ul {
+  left: auto;
+  right: 0;
+}
+#nexus li li * {
+  height: 0;
+  border-left: 1px solid #cc9900;
+  border-right: 1px solid #cc9900;
+}
+#nexus li:hover li * {
+  height: 3em !important;
+}
+#nexus li:hover > a, #nexus li:hover > input {
+  background-color: #cc9900;
+}
+#nexus a {
+  padding: 0 1em;
+}
+#nexus input {
+  padding-left: 3em;
+  padding-right: 1em;
+  min-width: 100%;
+  outline: none;
+  border: none;
+}
+#nexus input::-webkit-input-placeholder {
+  color: #4F4F4F;
+}
+#nexus [class^="icon-"], #nexus [class*=" icon-"] {
+  padding-left: 1em;
+}
+#nexus [class^="icon-"]::before,
+#nexus [class*=" icon-"]::before {
+  display: inline-block;
+  text-align: center;
+  width: 3em;
+}
+#nexus .icon-search {
+  position: absolute;
+  overflow: hidden;
+  width: 3em;
+  height: 3em;
+  background: transparent !important;
+}
+#nexus .icon-menu {
+  width: 3em !important;
+  height: 2.5em;
+  padding: 0 0.5em !important;
+}
+#nexus .icon-menu::before {
+  content: '';
+  outline-color: black;
+  outline-style: solid;
+  height: 0.2em;
+  background: #cc9900;
+  vertical-align: -2px;
+  width: 2em !important;
+  box-shadow: 0 -0.5em #cc9900, 0 -1em #cc9900;
+}
+#nexus .icon-menu:hover::before {
+  outline-style: none;
+  background: #000;
+  box-shadow: 0 -0.5em #fff, 0 -1em #000;
+}
+#nexus .peek ul {
+  overflow: hidden;
+  position: fixed;
+  top: 2.5em;
+  border-right: 1px solid #cc9900;
+  min-width: 0;
+  width: 0.1px;
+  z-index: 1;
+  bottom: 0;
+}
+#nexus .peek ul li * {
+  border-left: none;
+  border-right: none;
+}
+#nexus .peek ul:hover {
+  width: 12em !important;
+}
+#nexus .peek:hover ul {
+  width: 4.85em;
+}
+#nexus .peek li {
+  height: 2.5em;
+  overflow: hidden;
+}
+#nexus + * {
+  margin-top: 4em;
+}
+
+@media (max-width: 800px) {
+  #nexus {
+    font-size: 0.8em;
+  }
+  #nexus, #nexus * {
+    transition: none !important;
+  }
+  #nexus .peek ul {
+    width: 0;
+  }
+  #nexus .peek:hover ul {
+    width: 15em;
+  }
+}
+
+#nexus .nav-link.open,
+#nexus .nav-link.open:focus,
+#nexus .nav-link.open:hover,
+#nexus .nav-link.active,
+#nexus .nav-link.active:focus,
+#nexus .nav-link.active:hover {
+  text-decoration: overline!important;
+  animation: blinker 1s linear infinite;
+}
+@keyframes blinker {  
+  50% { opacity: 0.6; }
 }

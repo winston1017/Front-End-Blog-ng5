@@ -1,61 +1,96 @@
-<nav class="navbar navbar-dark navbar-fixed-top">
+<nav class="navbar-fixed-top">
   <div class="container">
 
-    <a class="navbar-brand" routerLink="/">Winston Lee</a>
 
     <!-- Show this for logged out users -->
-    <ul *showAuthed="false" class="nav navbar-nav pull-xs-right">
-
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-          <i class="ion-home"></i>&nbsp;Home
+    <ul *showAuthed="false" id="nexus" class="shadow">
+      <!-- Peek Menu -->
+      <li class="peek">
+        <a class="icon-menu">
         </a>
+        <ul>
+          <!-- Site Navigation-->
+          <li class="hidden-sm hidden-md hidden-lg">
+            <a routerLink="/">Home</a>
+          </li>
+          <li>
+            <a routerLink="/profile/winston">About</a>
+          </li>
+          <li>
+            <a href="#">Projects (WIP)</a>
+          </li>
+          <li>
+            <a routerLink="/login">Login</a>
+          </li>
+          <li>
+            <a routerLink="/register">Sign Up</a>
+          </li>
+        </ul>
       </li>
-
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/login" routerLinkActive="active">
-          Sign in
-        </a>
+      <!-- Horizontal Menu -->
+      <li class="hidden-xs">
+        <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
       </li>
-
-      <li class="nav-item hidden-xs">
-        <a class="nav-link" routerLink="/register" routerLinkActive="active">
-          Sign up
-        </a>
+      <!-- Right handed menu -->
+      <li class="right">
+        <a class="nav-link icon-user" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="/login">Account</a>
+        <ul>
+          <li>
+            <a class="nav-link"routerLinkActive="active" routerLink="/login">Login</a>
+          </li>
+          <li>
+            <a class="nav-link" routerLinkActive="active" routerLink="/register">Sign Up</a>
+          </li>
+        </ul>
       </li>
-
+      <li class="right">
+        <a class="icon-print nav-link" routerLinkActive="active" routerLink="/profile/winston">About</a>
+      </li>
     </ul>
 
     <!-- Show this for logged in users -->
-    <ul *showAuthed="true" class="nav navbar-nav pull-xs-right">
 
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-          <i class="ion-home"></i>&nbsp;Home
+    <ul *showAuthed="true" id="nexus" class="shadow">
+      <!-- Peek Menu -->
+      <li class="peek">
+        <a class="icon-menu">
+          <span>Menu</span>
         </a>
+        <ul>
+          <!-- Site Navigation-->
+          <li>
+            <a class="icon-projects" href="#">Projects (WIP)</a>
+          </li>
+          <li>
+            <a class="icon-settings" routerLink="/settings">Settings</a>
+          </li>
+        </ul>
       </li>
-      <li *ngIf="currentUser.username === 'winston'" class="nav-item hidden-xs">
-        <a class="nav-link" routerLink="/editor" routerLinkActive="active">
-          <i class="ion-compose"></i>&nbsp;New Article
-        </a>
+      <!-- Horizontal Menu -->
+      <li>
+        <a class="icon-portal" routerLink="/">Home</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/profile', currentUser.username]" routerLinkActive="active">
-          <img [src]="currentUser.image" *ngIf="currentUser.image" class="user-pic" /> {{ currentUser.username }}
-        </a>
+      <!-- Right handed menu -->
+      <li class="right">
+        <a class="icon-user">{{ currentUser.username }}</a>
+        <ul>
+          <li>
+            <a class="icon-settings" [routerLink]="['/profile', currentUser.username]">Profile</a>
+          </li>
+          <li>
+            <a class="icon-settings" routerLink="/settings">Settings</a>
+          </li>
+          <li>
+            <a class="icon-settings" href="" (click)="logout()">Logout</a>
+          </li>
+          <li *ngIf="currentUser.username === 'winston'">
+            <a class="icon-settings" routerLink="/editor">New Article</a>
+          </li>
+        </ul>
       </li>
-      <li class="nav-item hidden-xs">
-          <a class="nav-link" routerLink="/settings" routerLinkActive="active">
-            <i class="ion-gear-a"></i>&nbsp;Settings
-          </a>
-        </li>
-      <li class="nav-item">
-        <a class="nav-link" href="" (click)="logout()" routerLinkActive="active">
-          <i class="ion-log-out"></i>&nbsp;Logout
-        </a>
+      <li class="right hidden-xs">
+        <a class="icon-print" routerLink="/profile/winston">About</a>
       </li>
-
     </ul>
-
   </div>
 </nav>

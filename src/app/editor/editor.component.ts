@@ -53,7 +53,9 @@ export class EditorComponent implements OnInit {
     // clear the input
     this.tagField.reset('');
   }
-
+  onKey(event: any) { // without type info
+    this.article.title = event.target.value;
+  }
   removeTag(tagName: string) {
     this.article.tagList = this.article.tagList.filter((tag) => tag !== tagName);
   }

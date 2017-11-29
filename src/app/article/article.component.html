@@ -6,7 +6,8 @@
 
       <div class="row" style="text-align:center">
         <article-meta [article]="article">
-        </article-meta><br>
+        </article-meta>
+        <br>
 
         <span [hidden]="!canModify">
           <a class="btn btn-sm btn-outline-secondary" [routerLink]="['/editor', article.slug]">
@@ -32,12 +33,11 @@
   </div>
 
   <div class="container page">
-
     <div class="row article-content">
       <div class="col-md-12" style="
       background:#fafafa;
-      border-radius: 0.5rem; ">
-
+      border-radius: 0.5rem;
+      margin-top: 0.5rem;">
         <div [innerHTML]="article.body | markdown" style="padding:0.15em"></div>
 
         <ul class="tag-list">
@@ -48,8 +48,6 @@
 
       </div>
     </div>
-
-    <hr />
 
     <div class="article-actions">
       <article-meta [article]="article">
@@ -96,7 +94,7 @@
           </form>
         </div>
 
-        <div *showAuthed="false">
+        <div *showAuthed="false" style="text-align:center">
           <a [routerLink]="['/login']">Sign in</a> or
           <a [routerLink]="['/register']">sign up</a> to add comments on this article.
         </div>
