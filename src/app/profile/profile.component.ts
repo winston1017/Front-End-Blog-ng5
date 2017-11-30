@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
 import { User, UserService, Profile } from '../shared';
 
 @Component({
@@ -30,9 +29,6 @@ export class ProfileComponent implements OnInit {
         );
       }
     );
-
-
-
   }
 
   onToggleFollowing(following: boolean) {

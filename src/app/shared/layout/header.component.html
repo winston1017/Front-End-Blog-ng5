@@ -1,10 +1,6 @@
 <nav class="navbar-fixed-top">
   <div class="container">
-
-
-    <!-- Show this for logged out users -->
     <ul *showAuthed="false" id="nexus" class="shadow">
-      <!-- Peek Menu -->
       <li class="peek">
         <a class="icon-menu">
         </a>
@@ -13,7 +9,7 @@
             <a class="nav-link" routerLinkActive="active" routerLink="/profile/winston">About</a>
           </li>
           <li>
-            <a href="#">Projects (WIP)</a>
+            <a href="https://play.google.com/store/apps/details?id=com.WontonLabs.KnockThemOff2&hl=en">Projects (WIP)</a>
           </li>
           <li>
             <a class="nav-link" routerLinkActive="active" routerLink="/login">Login</a>
@@ -23,11 +19,9 @@
           </li>
         </ul>
       </li>
-      <!-- Horizontal Menu -->
       <li>
         <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
       </li>
-      <!-- Right handed menu -->
       <li class="right">
         <a class="nav-link icon-user" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="/login">Account</a>
         <ul>
@@ -44,29 +38,23 @@
       </li>
     </ul>
 
-    <!-- Show this for logged in users -->
-
     <ul *showAuthed="true" id="nexus" class="shadow">
-      <!-- Peek Menu -->
       <li class="peek">
         <a class="icon-menu">
           <span>Menu</span>
         </a>
         <ul>
-          <!-- Site Navigation-->
           <li>
               <a class="nav-link" routerLinkActive="active" routerLink="/profile/winston">About</a>
             </li>
           <li>
-            <a class="icon-projects" href="#">Projects (WIP)</a>
+            <a class="icon-projects" href="https://play.google.com/store/apps/details?id=com.WontonLabs.KnockThemOff2&hl=en">Projects (WIP)</a>
           </li>
         </ul>
       </li>
-      <!-- Horizontal Menu -->
       <li>
         <a  class="nav-link" routerLinkActive="active" routerLink="/">Home</a>
       </li>
-      <!-- Right handed menu -->
       <li class="right">
         <a class="icon-user">{{ currentUser.username }}</a>
         <ul>

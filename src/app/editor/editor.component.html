@@ -1,8 +1,9 @@
 <div class="editor-page">
   <div class="container page">
     <div class="row">
-      <div class="col-md-10 col-md-offset-1 col-xs-12" style="margin-top:7vh">
-        <h1><strong>Title:</strong><br>&nbsp;&nbsp;{{this.article.title}}</h1>
+      <div class="col-md-10 col-md-offset-1 col-xs-12">
+        <h1>Title:
+          <br>&nbsp;{{this.article.title}}</h1>
 
         <list-errors [errors]="errors"></list-errors>
         <form [formGroup]="articleForm">
@@ -14,11 +15,11 @@
             </fieldset>
 
             <fieldset class="form-group">
-              <input class="form-control" formControlName="description" type="text" placeholder="What's this article about?" />
+              <input class="form-control" formControlName="description" type="text" placeholder="Preview" />
             </fieldset>
 
             <fieldset class="form-group">
-              <textarea class="form-control" formControlName="body" rows="8" placeholder="Write your article (in markdown)">
+              <textarea class="form-control" formControlName="body" rows="8" placeholder="Write article in markdown">
               </textarea>
             </fieldset>
 

@@ -9,7 +9,6 @@
             <div class="ani">
               <div class="mtest"></div>
             </div>
-            <h1 class="animated bounceInDown ubuntu-font">Winston Lee</h1>
           </div>
 
           <div class="rightSide col-lg-9 col-md-9 col-sm-12 col-xs-12">
@@ -19,8 +18,8 @@
               <div class="col-md-10 col-md-offset-1 col-xs-12 col-sm-12">
                 <h1>
                   <div id="typed22">
-                    <p>Hi I'm <strong>Winston,</strong><br>^888 I am a Computer Science graduate from Simon Fraser University in Vancouver, BC.</p>
-                    <p>Hi I'm <strong>Winston,</strong><br> I am experienced in  C++, C#, Angular 5, Node.js, Express.js, HTML, CSS, Bootstrap and Unity Engine.</p>
+                    <p>Hi I'm <strong>Winston Lee,</strong><br><br>^888 I am a Computer Science graduate from Simon Fraser University in Vancouver, BC.</p>
+                    <p>Hi I'm <strong>Winston Lee,</strong><br><br> I am experienced in C++, C#, Angular 5, Node.js, Express.js, HTML, CSS, Bootstrap and Unity Engine.</p>
                   </div>
                   <span class="type-font" id="typed-strings22"></span>
                 </h1>
@@ -39,15 +38,15 @@
               <div class="col-md-12 col-xs-12 col-sm-12">
                 <h3>
                   <a href="https://www.linkedin.com/in/winston-software-developer/">
-                    <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/square-linkedin-256.png" class="img-contact animated bounceIn hvr-wobble-top"
+                    <img src="assets/img/lin.png" class="img-contact animated bounceIn hvr-wobble-top"
                     />
                   </a>
                   <a href="https://github.com/winston1017/">
-                    <img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" class="img-contact animated bounceIn hvr-wobble-top"
+                    <img src="assets/img/git.png" class="img-contact animated bounceIn hvr-wobble-top"
                     />
                   </a>
                   <a href="mailto:winston1017@gmail.com">
-                    <img src="http://icons.iconarchive.com/icons/alecive/flatwoken/512/Apps-Gmail-icon.png" class="img-contact animated bounceIn hvr-wobble-top"
+                    <img src="assets/img/gi.png" class="img-contact animated bounceIn hvr-wobble-top"
                     />
                   </a>
                 </h3>
@@ -58,7 +57,7 @@
       </div>
     </div>
   </div>
-  <div class="container page">
+  <div class="container">
     <div class="row">
 
       <div class="col-md-9">
@@ -94,7 +93,7 @@
       </div>
 
       <div class="col-md-3">
-        <div class="sidebar" style="padding: 0.8em 2em; margin: 0.5em 0; text-align:left !important">
+        <div class="sidebar">
           <p style="text-align:center">
             <u>
               <b>Website Info</b>
@@ -120,7 +119,7 @@
             Loading tags...
           </div>
 
-          <div [hidden]="!tagsLoaded || tags.length">
+          <div [hidden]="((tagsLoaded===true) || (tags.length!=0))">
             No tags are here... yet.
           </div>
         </div>

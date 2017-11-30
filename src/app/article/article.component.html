@@ -32,20 +32,15 @@
     </div>
   </div>
 
-  <div class="container page">
+  <div class="container">
     <div class="row article-content">
-      <div class="col-md-12" style="
-      background:#fafafa;
-      border-radius: 0.5rem;
-      margin-top: 0.5rem;">
+      <div class="col-md-12">
         <div [innerHTML]="article.body | markdown" style="padding:0.15em"></div>
-
         <ul class="tag-list">
           <li *ngFor="let tag of article.tagList" class="tag-default tag-pill tag-outline">
             {{ tag }}
           </li>
         </ul>
-
       </div>
     </div>
 
