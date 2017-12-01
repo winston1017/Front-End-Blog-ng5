@@ -3,53 +3,42 @@
     <div class="banner">
       <div class="container">
         <div class="row">
-
-          <div class="leftSide col-lg-3 col-md-3 hidden-xs hidden-sm">
-
-            <div class="ani">
-              <div class="mtest"></div>
-            </div>
+          <div class="leftSide col-lg-2 col-md-10 hidden-xs hidden-sm">
+            <div class="mtest"></div>
           </div>
-
-          <div class="rightSide col-lg-9 col-md-9 col-sm-12 col-xs-12">
-
+          <div class="rightSide col-lg-10 col-md-10 col-sm-12 col-xs-12">
             <div class="row">
-
-              <div class="col-md-10 col-md-offset-1 col-xs-12 col-sm-12">
+              <div class="typer col-md-12 col-xs-12 col-sm-12">
                 <h1>
-                  <div id="typed22">
-                    <p>Hi I'm <strong>Winston Lee,</strong><br><br>^888 I am a Computer Science graduate from Simon Fraser University in Vancouver, BC.</p>
-                    <p>Hi I'm <strong>Winston Lee,</strong><br><br> I am experienced in C++, C#, Angular 5, Node.js, Express.js, HTML, CSS, Bootstrap and Unity Engine.</p>
-                  </div>
+                    <div id="typed22">
+                        <p>Hi I'm <strong>Winston Lee,</strong><br><br>^888I am a Computer Science graduate from Simon Fraser University in Vancouver, BC.</p>
+                        <p>Hi I'm <strong>Winston Lee,</strong><br><br>I am experienced in responsive web design and development.</p>
+                        <p>Hi I'm <strong>Winston Lee,</strong><br><br>I am experienced in C++, C#, Angular 5, Node.js, HTML, CSS, Bootstrap and Unity Engine.<br>
+                          <br>^300Here is my <a href="assets/ResumeC.pdf">[&nbsp;<strong>RESUMÉ</strong>&nbsp;]</a>.</p>
+                      </div>
                   <span class="type-font" id="typed-strings22"></span>
                 </h1>
               </div>
             </div>
-
             <div class="row">
-              <div class="col-md-10 col-md-offset-1 col-xs-12 col-sm-12">
-                <h2 class="type-font">
-                  <span class="type-font" id="typed-strings"></span>
-                </h2>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-12 col-xs-12 col-sm-12">
-                <h3>
-                  <a href="https://www.linkedin.com/in/winston-software-developer/">
-                    <img src="assets/img/lin.png" class="img-contact animated bounceIn hvr-wobble-top"
-                    />
-                  </a>
-                  <a href="https://github.com/winston1017/">
-                    <img src="assets/img/git.png" class="img-contact animated bounceIn hvr-wobble-top"
-                    />
-                  </a>
-                  <a href="mailto:winston1017@gmail.com">
-                    <img src="assets/img/gi.png" class="img-contact animated bounceIn hvr-wobble-top"
-                    />
-                  </a>
-                </h3>
+              <div class="contacts col-md-12 col-xs-12 col-sm-12">
+                <div class="row">
+                  <div class="img-block col-md-4 col-xs-4 col-sm-4">
+                    <a href="https://www.linkedin.com/in/winston-software-developer/">
+                      <img src="assets/img/lin.png" class="img-contact animated bounceIn hvr-wobble-top" />
+                    </a>
+                  </div>
+                  <div class="img-block col-md-4 col-xs-4 col-sm-4">
+                    <a href="https://github.com/winston1017/">
+                      <img src="assets/img/git.png" class="img-contact animated bounceIn hvr-wobble-top" />
+                    </a>
+                  </div>
+                  <div class="img-block col-md-4 col-xs-4 col-sm-4">
+                    <a href="mailto:winston1017@gmail.com">
+                      <img src="assets/img/gi.png" class="img-contact animated bounceIn hvr-wobble-top" />
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -59,71 +48,54 @@
   </div>
   <div class="container">
     <div class="row">
-
       <div class="col-md-9">
         <div class="feed-toggle">
           <div class="row">
             <ul class="nav nav-pills outline-active">
-              <div class="col-3">
-                <li class="nav-item">
-                  <a class="nav-link" [ngClass]="{'active': listConfig.type === 'all' && !listConfig.filters.tag}" (click)="setListTo('all')">
-                    Global Feed
-                  </a>
-                </li>
-              </div>
-              <div class="col-3">
-                <li class="nav-item">
-                  <a class="nav-link" [ngClass]="{'active': listConfig.type === 'links'}" (click)="setListTo('links')">
-                    About Me
-                  </a>
-                </li>
-              </div>
-              <div class="col-3">
-                <li class="nav-item" [hidden]="!listConfig.filters.tag">
-                  <a class="nav-link active">
-                    <i class="ion-pound"></i> {{ listConfig.filters.tag }}
-                  </a>
-                </li>
-              </div>
+              <li class="nav-item">
+                <a class="nav-link" [ngClass]="{'active': listConfig.type === 'all' && !listConfig.filters.tag}" (click)="setListTo('all')">
+                  Blog Posts
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [ngClass]="{'active': listConfig.type === 'links'}" (click)="setListTo('links')">
+                  About Me
+                </a>
+              </li>
+              <li class="nav-item" [hidden]="!listConfig.filters.tag">
+                <a class="nav-link active">
+                  <i class="ion-pound"></i> {{ listConfig.filters.tag }}
+                </a>
+              </li>
             </ul>
           </div>
         </div>
-
         <article-list [limit]="10" [config]="listConfig"></article-list>
       </div>
-
       <div class="col-md-3">
         <div class="sidebar">
-          <p style="text-align:center">
-            <u>
+          <p>
               <b>Website Info</b>
-            </u>
           </p>
           <span>This website is designed entirely without using Wordpress or any other CMS. Built with MongoDB, Javascript and
             Type Script (Angular 5, Node JS and Express JS) with lots of CSS and HTML.</span>
         </div>
         <div class="sidebar">
           <p>
-            <u>
               <b>Popular Tags</b>
-            </u>
           </p>
-
           <div class="tag-list">
             <a href="#" *ngFor="let tag of tags" (click)="setListTo('all', {tag: tag})" class="tag-default tag-pill">
               {{ tag }}
             </a>
           </div>
-
           <div [hidden]="tagsLoaded">
-            Loading tags...
+            Loading tags
           </div>
-
           <div [hidden]="((tagsLoaded===true) || (tags.length!=0))">
-            No tags are here... yet.
+            No tags yet
           </div>
         </div>
       </div>
-
     </div>
   </div>

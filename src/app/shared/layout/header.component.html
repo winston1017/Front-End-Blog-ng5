@@ -53,7 +53,7 @@
         </ul>
       </li>
       <li>
-        <a  class="nav-link" routerLinkActive="active" routerLink="/">Home</a>
+        <a  class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="/">Home</a>
       </li>
       <li class="right">
         <a class="icon-user">{{ currentUser.username }}</a>

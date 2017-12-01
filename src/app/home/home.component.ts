@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
 import { ArticleListConfig, TagsService, UserService } from '../shared';
-
 import * as Typed from 'typed.js';
 
 @Component({
@@ -23,15 +21,6 @@ export class HomeComponent implements OnInit {
   tagsLoaded = false;
 
   ngOnInit() {
-
-    var options = {
-      strings: ['Here is my <a href="assets/ResumeC.pdf">[&nbsp;<strong>RESUMÉ</strong>&nbsp;]</a>.'],
-      typeSpeed: 30,
-      startDelay: 11600,
-      showCursor: false,
-    };
-
-    var typed = new Typed("#typed-strings", options);
 
     var typed22 = new Typed('#typed-strings22', {
       stringsElement: '#typed22',
